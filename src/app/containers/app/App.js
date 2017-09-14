@@ -51,7 +51,11 @@ class App extends Component {
       userIsAuthenticated
     } = this.props;
 
+    return (
+      <MainRoutes />
+    );
 
+    /*
     return (
       <div id="appContainer">
         <NavigationBar
@@ -72,6 +76,7 @@ class App extends Component {
         />
       </div>
     );
+    */
   }
 
   handleLeftNavItemClick = (event, viewName) => {

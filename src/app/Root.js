@@ -32,13 +32,11 @@ class Root extends Component {
   render() {
     return (
       <ApolloProvider store={store} client={client}>
-        <div>
           <Router history={syncedHistory}>
             <ScrollToTop>
               <App />
             </ScrollToTop>
           </Router>
-        </div>
       </ApolloProvider>
     );
   }

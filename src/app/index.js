@@ -5,12 +5,8 @@ import {render}             from 'react-dom';
 import { AppContainer }     from 'react-hot-loader';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
 
-import 'animate.css';
-import 'jquery';
-import 'font-awesome/css/font-awesome.min.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/js/bootstrap.min.js';
-import './style/index.style.scss';
+import '../../scss/style.scss';
+// import './style/index.style.scss';
 import Root from './Root';
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';

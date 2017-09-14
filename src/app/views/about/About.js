@@ -39,7 +39,7 @@ class About extends PureComponent {
 
     return (
       <div className={cx({ "view-enter": viewEntersAnim })}>
-        <h1>About</h1>
+        <h1>About prueba</h1>
       </div>
     );
   }

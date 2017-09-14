@@ -11,6 +11,15 @@ import {
 }                         from "react-router-dom";
 import auth               from '../../services/auth';
 
+import navigationModel        from '../../models/navigation.json';
+
+import Header from '../../components/Header/';
+import Sidebar from '../../components/Sidebar/';
+import Breadcrumb from '../../components/Breadcrumb/';
+import Aside from '../../components/Aside/';
+import Footer from '../../components/Footer/';
+import Dashboard from '../../views/Dashboard/';
+
 class PrivateRoute extends Component {
   static propTypes = {
     // react-router 4:
@@ -22,7 +31,13 @@ class PrivateRoute extends Component {
     path:       PropTypes.string
   };
 
+  state = {
+    navModel : navigationModel
+  };
+
   render() {
+    const { navModel } = this.state;
+
     const {
       component: Component,
       ...rest
@@ -37,10 +52,28 @@ class PrivateRoute extends Component {
         {...rest}
         render={
           props => (
-            !isTokenExpired && isUserAuthenticated
-              ? <Component {...props} />
-              : <Redirect to={{ pathname: "/login", state: { from: location } }} />
-          )
+          !isTokenExpired && isUserAuthenticated
+            ?
+            <div className="app">
+              <Header />
+              <div className="app-body">
+                <Sidebar
+                  {...this.props}
+                  brand={navModel.brand}
+                  navModel={navModel}
+                />
+                <main className="main">
+                  <Breadcrumb />
+                  <div className="container-fluid">
+                    <Component {...props} />
+                  </div>
+                </main>
+                <Aside />
+              </div>
+              <Footer />
+            </div>
+            : <Redirect to={{ pathname: "/login", state: { from: location } }} />
+        )
         }
       />
     );
