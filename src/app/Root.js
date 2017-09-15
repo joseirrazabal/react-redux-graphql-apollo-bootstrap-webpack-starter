@@ -10,7 +10,7 @@ import {
 }                               from 'react-router-dom';
 // static website: uncomment createHashHistory, otherwise uncomment createBrowserHistory
 import {
-// createBrowserHistory as createHistory,
+  // createBrowserHistory as createHistory,
   createHashHistory as createHistory
 }                               from 'history';
 import {
@@ -32,11 +32,11 @@ class Root extends Component {
   render() {
     return (
       <ApolloProvider store={store} client={client}>
-          <Router history={syncedHistory}>
-            <ScrollToTop>
-              <App />
-            </ScrollToTop>
-          </Router>
+        <Router history={syncedHistory}>
+          <ScrollToTop>
+            <App />
+          </ScrollToTop>
+        </Router>
       </ApolloProvider>
     );
   }

@@ -88,7 +88,7 @@ export default {
     },
     {
       name: 'Widgets',
-      url: '/widgets',
+      url: '/about',
       icon: 'icon-calculator',
       badge: {
         variant: 'info',

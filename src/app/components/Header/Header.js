@@ -55,27 +55,32 @@ class Header extends Component {
         <NavbarToggler className="d-lg-none" onClick={this.mobileSidebarToggle}>&#9776;</NavbarToggler>
         <NavbarBrand href="#"></NavbarBrand>
         <NavbarToggler className="d-md-down-none" onClick={this.sidebarToggle}>&#9776;</NavbarToggler>
+
         <Nav className="d-md-down-none" navbar>
           <NavItem className="px-3">
-            <NavLink href="#">Dashboard</NavLink>
+            <NavLink href="#/">Dashboard</NavLink>
           </NavItem>
           <NavItem className="px-3">
             <NavLink href="#">Users</NavLink>
           </NavItem>
           <NavItem className="px-3">
-            <NavLink href="#">Settings</NavLink>
+            <NavLink href="/#/about">Settings</NavLink>
           </NavItem>
         </Nav>
+
         <Nav className="ml-auto" navbar>
           <NavItem className="d-md-down-none">
             <NavLink href="#"><i className="icon-bell"></i><Badge pill color="danger">5</Badge></NavLink>
           </NavItem>
+
           <NavItem className="d-md-down-none">
             <NavLink href="#"><i className="icon-list"></i></NavLink>
           </NavItem>
+
           <NavItem className="d-md-down-none">
             <NavLink href="#"><i className="icon-location-pin"></i></NavLink>
           </NavItem>
+
           <NavItem>
             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
               <DropdownToggle className="nav-link dropdown-toggle">
@@ -99,8 +104,9 @@ class Header extends Component {
               </DropdownMenu>
             </Dropdown>
           </NavItem>
+
         </Nav>
-        <NavbarToggler className="d-md-down-none" type="button" onClick={this.asideToggle}>&#9776;</NavbarToggler>
+        {/* <NavbarToggler className="d-md-down-none" type="button" onClick={this.asideToggle}>&#9776;</NavbarToggler> */}
       </header>
     )
   }
