@@ -33,7 +33,6 @@ export const MainRoutes = () => {
 
       {/* non protected views */}
       <Route path="/login" component={ConnectedLogin} />
-      {/* <Route path="/register" component={ConnectedRegister} /> */}
 
       {/* protected views */}
       {/* <PrivateRoute exact path="/" component={ConnectedHome} /> */}

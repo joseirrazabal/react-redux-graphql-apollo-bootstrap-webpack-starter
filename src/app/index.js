@@ -5,6 +5,8 @@ import {render}             from 'react-dom';
 import { AppContainer }     from 'react-hot-loader';
 import injectTpEventPlugin  from 'react-tap-event-plugin';
 
+import 'font-awesome/css/font-awesome.min.css';
+import 'simple-line-icons/css/simple-line-icons.css';
 import '../../scss/style.scss';
 
 // import './style/index.style.scss';
