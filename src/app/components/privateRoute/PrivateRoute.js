@@ -16,7 +16,7 @@ import navigationModel        from '../../models/navigation.json';
 import Header from '../../components/Header/';
 import Sidebar from '../../components/Sidebar/';
 import Breadcrumb from '../../components/Breadcrumb/';
-// import Aside from '../../components/Aside/';
+import Aside from '../../components/Aside/';
 import Footer from '../../components/Footer/';
 
 class PrivateRoute extends Component {
@@ -67,7 +67,7 @@ class PrivateRoute extends Component {
                     <Component {...props} />
                   </div>
                 </main>
-                {/* <Aside /> */}
+                <Aside />
               </div>
               <Footer />
             </div>

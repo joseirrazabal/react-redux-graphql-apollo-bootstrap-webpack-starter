@@ -106,7 +106,7 @@ class Header extends Component {
           </NavItem>
 
         </Nav>
-        {/* <NavbarToggler className="d-md-down-none" type="button" onClick={this.asideToggle}>&#9776;</NavbarToggler> */}
+        <NavbarToggler className="d-md-down-none" type="button" onClick={this.asideToggle}>&#9776;</NavbarToggler>
       </header>
     )
   }

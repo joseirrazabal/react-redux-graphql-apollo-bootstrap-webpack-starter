@@ -9,7 +9,6 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'simple-line-icons/css/simple-line-icons.css';
 import '../../scss/style.scss';
 
-// import './style/index.style.scss';
 import Root from './Root';
 
 const ELEMENT_TO_BOOTSTRAP  = 'root';
