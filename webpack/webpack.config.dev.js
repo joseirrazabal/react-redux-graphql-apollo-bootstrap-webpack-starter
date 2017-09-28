@@ -81,14 +81,16 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                alias: {'../img': '../public/img'},
+                importLoader: 1,
                 // localIdentName: '[hash:base64:5]',
-                // modules: true
+                localIdentName: '[local]',
+                modules: true,
+                camelCase: true,
+                alias: {'../img': '../public/img'},
               }
             },
-            {
-              loader: 'sass-loader'
-            }
+            'resolve-url-loader',
+            'sass-loader?sourceMap'
           ]
         }))
       },

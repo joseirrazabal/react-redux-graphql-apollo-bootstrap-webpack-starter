@@ -10,7 +10,7 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "dev": "rimraf docs/assets && cross-env NODE_ENV=dev webpack --display-entrypoints --config webpack.dev.config.js",
     "prod": "rimraf docs/assets && cross-env NODE_ENV=production webpack -p --config webpack.production.config.js",
-		"start": "webpack-dev-server --config webpack/webpack.config.dev.js",
+    "start": "webpack-dev-server --config webpack/webpack.config.dev.js",
     "start-spa-dev": "npm run dev && cross-env NODE_ENV=dev nodemon ./src/server/SPA/index.js",
     "start-spa-prod": "npm run prod && cross-env NODE_ENV=production node ./src/server/SPA/index.js"
   },
@@ -113,6 +113,7 @@
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
+    "aln-searchFilters": "^0.0.20",
     "animate.css": "^3.5.1",
     "apollo-client": "^1.9.0-1",
     "babel-polyfill": "^6.23.0",
@@ -150,6 +151,7 @@
     "reactstrap": "^4.8.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "resolve-url-loader": "^2.1.0",
     "serialize-javascript": "^1.4.0",
     "simple-line-icons": "^2.4.1"
   }
